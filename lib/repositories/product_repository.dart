@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import '../models/product_model.dart';
 
 class ProductData {
-  static const String baseUrl = 'https://dummyjson.com/products';
+  static const String baseUrl = 'https://dummyjson.com/products?limit=0';
   Future<List<ProductModel>> fetchProducts() async {
     final response = await http.get(Uri.parse(baseUrl));
     if (response.statusCode == 200) {
